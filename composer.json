@@ -1,8 +1,10 @@
 {
-  "name": "WDB/wdb-rest",
+  "name": "wdb/wdb-rest",
   "type": "typo3-cms-extension",
   "description": "Example Rest-Api Extension for EXT:nnrestapi",
-  "authors": [],
+  "authors": [
+  
+  ],
   "require": {
     "typo3/cms-core": "^12.0",
     "nng/nnrestapi": "^2.0",
