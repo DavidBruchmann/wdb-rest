@@ -2,26 +2,26 @@
 plugin.tx_nnrestapi {
 	settings {
 		
-		# where to upload new files. Use @Api\Upload("config[wdb_rest]")
+		# where to upload new files. Use @Api\Upload("config[tx_wdbrest]")
 		fileUploads {
-			wdb_rest {
-				defaultStoragePath = 1:/wdb_rest/
+			tx_wdbrest {
+				defaultStoragePath = 1:/user_upload/tx_wdbrest/
 			}		
 		}
 		
-		# Default values for new entries
-		insertDefaultValues {
-			WDB\WdbRest\Domain\Model\Entry {
-				pid = 4
-			}
-		}
+#		# Default values for new entries
+#		insertDefaultValues {
+#			WDB\WdbRest\Domain\Model\Entry {
+#				pid = 4
+#			}
+#		}
 
-		# Reduce JSON in response to certain fields
-		globalDistillers {
-			WDB\WdbRest\Domain\Model\Entry {
-				#include = uid, title, files
-				flattenFileReferences = 1
-			}
-		}
-	}
+#		# Reduce JSON in response to certain fields
+#		globalDistillers {
+#			WDB\WdbRest\Domain\Model\Entry {
+#				#include = uid, title, files
+#				flattenFileReferences = 1
+#			}
+#		}
+#	}
 }

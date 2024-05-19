@@ -17,7 +17,4 @@ return [
     \WDB\WdbRest\Domain\Model\Page::class => [
         'tableName' => 'pages',
     ],
-    \WDB\WdbRest\Domain\Model\Entry::class => [
-        'tableName' => 'tx_wdbrest_domain_model_entry',
-    ],
 ];

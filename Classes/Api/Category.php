@@ -90,7 +90,7 @@ class Category extends \Nng\Nnrestapi\Api\AbstractApi
 	 * this endpoint.
 	 * 
 	 * @Api\Access("be_users,fe_users")
-	 * @Api\Upload("config[extname]")
+	 * @Api\Upload("config[tx_wdbrest]")
 	 * @WdbRestApi\Category("{'title':'Category', 'files':['UPLOAD:/file-0']}");
 	 * 
 	 * @param CategoryModel $category
@@ -121,7 +121,7 @@ class Category extends \Nng\Nnrestapi\Api\AbstractApi
 	 * this endpoint.
 	 * 
 	 * @Api\Access("be_users,fe_users")
-	 * @Api\Upload("config[extname]")
+	 * @Api\Upload("config[tx_wdbrest]")
 	 * @Api\Label("/api/category/{uid}")
 	 * 
 	 * @param CategoryModel $category

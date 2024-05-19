@@ -49,9 +49,25 @@ class Content extends \WDB\WdbRest\Domain\AbstractModel
     protected $listType = '';
 
 	/**
-	 * @var ObjectStorage<FileReference>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
 	 */
 	protected $assets;
+
+    /**
+     * colPos
+     *
+     * @var int
+     */
+    protected $colPos = 0;
+
+    /**
+     * pid
+	 * repeating it here avoids that the unchanged value
+	 * is shown despite the command to change it.
+     *
+     * @var int
+     */
+    protected $pid = 0;
  
 	/**
 	 * constructor
@@ -151,18 +167,51 @@ class Content extends \WDB\WdbRest\Domain\AbstractModel
 	}
 
 	/**
-	 * @return ObjectStorage
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
 	 */
 	public function getAssets() {
 	   return $this->assets;
 	}
  
 	/**
-	 * @param ObjectStorage $assets
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $assets
 	 * @return self
 	 */
-	public function setAssets(ObjectStorage $assets) {
+	public function setAssets(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $assets) {
 	   $this->assets = $assets;
 	   return $this;
+	}
+
+	/**
+	 * @return  int
+	 */
+	public function getColPos() {
+		return $this->colPos;
+	}
+
+	/**
+	 * @param   int  $colPos  colPos
+	 * @return  self
+	 */
+	public function setColPos($colPos) {
+		$this->colPos = $colPos;
+		return $this;
+	}
+
+	/**
+	 * @return  int
+	 */
+	public function getPid(): ?int
+	{
+		return $this->colPos;
+	}
+
+	/**
+	 * @param   int  $pid  pid
+	 * @return  void
+	 */
+	public function setPid($pid): void
+	{
+		$this->pid = $pid;
 	}
 }

@@ -123,7 +123,7 @@ class Content extends \Nng\Nnrestapi\Api\AbstractApi
 	 * this endpoint.
 	 * 
 	 * @Api\Access("be_users,fe_users")
-	 * @Api\Upload("config[extname]")
+	 * @Api\Upload("config[wdb_rest]")
 	 * @Api\Label("/api/content/{uid}")
 	 * 
 	 * @param ContentModel $content
